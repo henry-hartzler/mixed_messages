@@ -13,24 +13,20 @@ const mixedMessage = function() {
 //Creating a random astrology sign
     const allAstroSym = ['Ares', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'];
     let randAstroSym = randArr(allAstroSym);
-    //console.log(randAstroSym);
+    
 
 //Chooses a random planet's moon
     const allPlanets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'];
         let randMoon = randArr(allPlanets);
-//console.log(randMoon);
+
     const otherPlanet = (arr, moon) => {
-       // let other = [];
-        //other.push(randMoon);
-        //if 
-       // console.log(other);
+    
        const moonInd = arr.indexOf(moon);
        let newMoonInd = arr[moonInd-1];
        if (moonInd === 0) {
            newMoonInd === arr.pop();
        }
-       //console.log(arr[moonInd]);
-       //console.log(newMoonInd);
+       
        let other = randArr(arr);
        if (other !== moon) {
            return other;
@@ -38,9 +34,8 @@ const mixedMessage = function() {
             return newMoonInd;
        }
        
-    
-
     let otherOne = otherPlanet(allPlanets, randMoon);
+    
     //Creates a random horoscope
 //Extension idea: break the horoscope into multiple parts: day, prediction, advice
     const horoscopeA = [
@@ -58,7 +53,7 @@ const mixedMessage = function() {
         'and take it all in'
     ]
     let randHor = randArr(horoscopeA) + randArr(horoscopeB);
-    //console.log(randHor);
+   
 
     return `As a ${randAstroSym}, because of the position of ${otherOne} and ${randMoon}'s moons, your horoscope is: ${randHor}.`;
 }
