@@ -31,17 +31,24 @@ const mixedMessage = function() {
     let otherOne = otherPlanet(allPlanets, randMoon);
 //Creates a random horoscope
 //Extension idea: break the horoscope into multiple parts: day, prediction, advice
-    const allHoroscope = [
-    'Beware of those who would do you wrong', 
-    'Live life to the fullest, because you never know which day will be your last',
-    'The early bird gets the worm, but the late worm lives another day',
-    'Entrepreneurial opportunities may present themselves when you\'re least expecting it',
-    'Breathe easy and take it all in'
-]
-    let randHor = randArr(allHoroscope);
+    const horoscopeA = [
+    'Beware of those ', 
+    'Live life to the fullest, ',
+    'The early bird gets the worm, ',
+    'Entrepreneurial opportunities may present themselves ',
+    'Breathe easy '
+    ];
+    const horoscopeB = [
+        'who would do you wrong',
+        'because you never know which day will be your last',
+        'but the late worm lives another day',
+        'when you\'re least expecting it',
+        'and take it all in'
+    ]
+    let randHor = randArr(horoscopeA) + randArr(horoscopeB);
     //console.log(randHor);
 
-    return `As a ${randAstroSym}, because of the position of the ${otherOne} and ${randMoon}'s moon, your horoscope is: ${randHor}.`;
+    return `As a ${randAstroSym}, because of the position of the ${otherOne} and ${randMoon}'s moons, your horoscope is: ${randHor}.`;
 }
 
 console.log(mixedMessage());
