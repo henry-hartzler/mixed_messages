@@ -17,19 +17,31 @@ const mixedMessage = function() {
 
 //Chooses a random planet's moon
     const allPlanets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'];
-    let randMoon = randArr(allPlanets);
-    //console.log(randMoon);
+        let randMoon = randArr(allPlanets);
+//console.log(randMoon);
     const otherPlanet = (arr, moon) => {
-        let other = randArr(arr);
-        if (other !== moon) {
-            return other;
-        } else {
-            return arr[i+1];
-        }
-    }
+       // let other = [];
+        //other.push(randMoon);
+        //if 
+       // console.log(other);
+       const moonInd = arr.indexOf(moon);
+       let newMoonInd = arr[moonInd-1];
+       if (moonInd === 0) {
+           newMoonInd === arr.pop();
+       }
+       //console.log(arr[moonInd]);
+       //console.log(newMoonInd);
+       let other = randArr(arr);
+       if (other !== moon) {
+           return other;
+       } else
+            return newMoonInd;
+       }
+       
     
+
     let otherOne = otherPlanet(allPlanets, randMoon);
-//Creates a random horoscope
+    //Creates a random horoscope
 //Extension idea: break the horoscope into multiple parts: day, prediction, advice
     const horoscopeA = [
     'Beware of those ', 
@@ -48,7 +60,7 @@ const mixedMessage = function() {
     let randHor = randArr(horoscopeA) + randArr(horoscopeB);
     //console.log(randHor);
 
-    return `As a ${randAstroSym}, because of the position of the ${otherOne} and ${randMoon}'s moons, your horoscope is: ${randHor}.`;
+    return `As a ${randAstroSym}, because of the position of ${otherOne} and ${randMoon}'s moons, your horoscope is: ${randHor}.`;
 }
 
 console.log(mixedMessage());
