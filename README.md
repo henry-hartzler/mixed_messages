@@ -11,5 +11,5 @@
   + Planet's moon
   + Generic prediction / advice
 
-### Final product description
+## Final product
 Discover your daily horoscope based on your astrology sign, the orientation of the planets, and their moons. A word of caution, these predictions may be mixed up due to random indexes sorting through Javascript arrays!
