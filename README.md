@@ -1,6 +1,6 @@
 # Mixed Messages
 
-## Codecademy project details
+## Project details
 + This project should use JavaScript to produce a truly random message composed of at least 3 different sections.
 
 ## My take
@@ -10,3 +10,6 @@
   + Astrology sign
   + Planet's moon
   + Generic prediction / advice
+
+### Final product description
+Discover your daily horoscope based on your astrology sign, the orientation of the planets, and their moons. A word of caution, these predictions may be mixed up due to random indexes sorting through Javascript arrays!
